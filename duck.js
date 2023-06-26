@@ -70,25 +70,25 @@ function renderResults(){
 
 } 
 
-const bag = new Product("R2D2 bag", "img/bag.jpg");
-const banana = new Product("banana slicer", "img/banana.jpg");
-const bathroom = new Product("bathroom tablet", "img/bathroom.jpg");
-const boots = new Product("open toe boots", "img/boots.jpg");
-const breakfast = new Product("breakfast maker", "img/breakfast.jpg");
-const bubblegum = new Product("meatball bubblegum", "img/bubblegum.jpg");
-const chair = new Product("inverted chair", "img/chair.jpg");
-const cthulu = new Product("cthulu", "img/chtulu.jpg");
-const dogduck = new Product("dog duck mouth", "img/dog-duck.jpg");
-const dragon = new Product("dragon meat", "img/dragon.jpg");
-const pen = new Product("pen lid utensils", "img/pen.jpg");
-const petsweep = new Product("pet sweep", "img/pet-sweep.jpg");
-const scissors = new Product("pizza scissors", "img/scissors.jpg");
-const shark = new Product("shark sleeping bag", "img/shark.jpg");
-const sweep = new Product("baby sweep", "img/sweep.jpg");
-const tauntaun = new Product("tauntaun sleeping bag", "img/tauntaun.jpg");
-const unicorn = new Product("unicorn meat", "img/unicorn.jpg");
-const watercan = new Product("self watering can", "img/water-can.jpg");
-const wineglass = new Product("wineglass", "img/wine-glass.jpg");
+const bag = new Product("R2D2 bag", "archive/bag.jpg");
+const banana = new Product("banana slicer", "archive/banana.jpg");
+const bathroom = new Product("bathroom tablet", "archive/bathroom.jpg");
+const boots = new Product("open toe boots", "archive/boots.jpg");
+const breakfast = new Product("breakfast maker", "archive/breakfast.jpg");
+const bubblegum = new Product("meatball bubblegum", "archive/bubblegum.jpg");
+const chair = new Product("inverted chair", "archive/chair.jpg");
+const cthulu = new Product("cthulu", "archive/chtulu.jpg");
+const dogduck = new Product("dog duck mouth", "archive/dog-duck.jpg");
+const dragon = new Product("dragon meat", "archive/dragon.jpg");
+const pen = new Product("pen lid utensils", "archive/pen.jpg");
+const petsweep = new Product("pet sweep", "archive/pet-sweep.jpg");
+const scissors = new Product("pizza scissors", "archive/scissors.jpg");
+const shark = new Product("shark sleeping bag", "archive/shark.jpg");
+const sweep = new Product("baby sweep", "archive/sweep.jpg");
+const tauntaun = new Product("tauntaun sleeping bag", "archive/tauntaun.jpg");
+const unicorn = new Product("unicorn meat", "archive/unicorn.jpg");
+const watercan = new Product("self watering can", "archive/water-can.jpg");
+const wineglass = new Product("wineglass", "archive/wine-glass.jpg");
 
 renderProducts();
 
