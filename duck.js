@@ -59,10 +59,12 @@ function handleProductClick(event) {
     clicks++;
     console.log(clicks);
     let clickedProduct = event.target.alt;
+    //console.log(clickedProduct);
     for (let i = 0; i < allProducts.length; i++){
         if (clickedProduct === allProducts[i].name)
         allProducts[i].clicks++;
         break;
+        }
     }
 }
 
@@ -85,7 +87,7 @@ function renderResults(){
     }
  }
 
-} 
+
 
 const bag = new Product("R2D2 bag", "archive/bag.jpg");
 const banana = new Product("banana slicer", "archive/banana.jpg");
