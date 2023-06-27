@@ -39,13 +39,13 @@ function renderProducts() {
     let product2 = getRandomNumber();
     let product3 = getRandomNumber();
 
-    // while (product2 === product1 || product2 === product3) {
-    //     product2 = getRandomNumber();
-    //    }
+    while (product2 === product1 || product2 === product3) {
+        product2 = getRandomNumber();
+       }
 
-    // while (product3 === product1 || product3 === product2) {
-    //     product3 = getRandomNumber();
-    // }
+    while (product3 === product1 || product3 === product2) {
+        product3 = getRandomNumber();
+    }
     console.log(allProducts, "above image1.src");
 
     image1.src = allProducts[product1].src;
@@ -68,14 +68,12 @@ function handleProductClick(event) {
     clicks++;
     console.log(clicks);
     let clickedProduct = event.target.alt;
-    //console.log(clickedProduct);
-    // for (let i = 0; i < allProducts.length; i++){
-    //     if (clickedProduct === allProducts[i].name)
-    //     allProducts[i].clicks++;
-    //     break;
-    //     }
-    }
-}
+    console.log(clickedProduct);
+    for (let i = 0; i < allProducts.length; i++){
+        if (clickedProduct === allProducts[i].name)
+       allProducts[i].clicks++;
+        break;
+        }
 
 if (clicks === maxClicksAllowed){
     productContainer.removeEventListener("click", handleProductClick);
@@ -84,16 +82,18 @@ if (clicks === maxClicksAllowed){
     resultsButton.className = "clicks-allowed";
 } else {
     renderProducts();
+    }
+}
 }
 
 function renderResults(){
     console.log("Your results are in!");
     let ul = document.querySelector("ul");
-    // for (let i = 0; i < allProducts.length; i++) {
-    //     let li = document.createElement("li");
-    //     li.textContent = `${allProducts[i].name} had ${allProducts[i].views} views and was clicked ${allProducts[i].clicks} times.`;
-    //     ul.appendChild(li);
-    // }
+    for (let i = 0; i < allProducts.length; i++) {
+        let li = document.createElement("li");
+        li.textContent = `${allProducts[i].name} had ${allProducts[i].views} views and was clicked ${allProducts[i].clicks} times.`;
+        ul.appendChild(li);
+    }
  }
 
 
