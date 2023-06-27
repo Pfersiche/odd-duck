@@ -5,6 +5,7 @@ const maxClicksAllowed = 5;
 
 let allProducts = [];
 
+const resultsButton = document.querySelector("button") ;
 
 const productContainer = document.querySelector("section")
 
