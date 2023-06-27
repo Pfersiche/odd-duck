@@ -31,18 +31,22 @@ function Product (name, src) {
 
 }
 
+console.log(allProducts, "underneath constructor");
+
+
 function renderProducts() {
     let product1 = getRandomNumber();
     let product2 = getRandomNumber();
     let product3 = getRandomNumber();
 
-    while (product2 === product1 || product2 === product3) {
-        product2 = getRandomNumber();
-       }
+    // while (product2 === product1 || product2 === product3) {
+    //     product2 = getRandomNumber();
+    //    }
 
-    while (product3 === product1 || product3 === product2) {
-        product3 = getRandomNumber();
-    }
+    // while (product3 === product1 || product3 === product2) {
+    //     product3 = getRandomNumber();
+    // }
+    console.log(allProducts, "above image1.src");
 
     image1.src = allProducts[product1].src;
     image2.src = allProducts[product2].src;
@@ -50,6 +54,8 @@ function renderProducts() {
     image1.alt = allProducts[product1].name;
     image2.alt = allProducts[product2].name;
     image3.alt = allProducts[product3].name;
+    console.log(allProducts, "underneath image1.src");
+
     allProducts[product1].views++;
     allProducts[product2].views++;
     allProducts[product3].views++;
@@ -63,11 +69,11 @@ function handleProductClick(event) {
     console.log(clicks);
     let clickedProduct = event.target.alt;
     //console.log(clickedProduct);
-    for (let i = 0; i < allProducts.length; i++){
-        if (clickedProduct === allProducts[i].name)
-        allProducts[i].clicks++;
-        break;
-        }
+    // for (let i = 0; i < allProducts.length; i++){
+    //     if (clickedProduct === allProducts[i].name)
+    //     allProducts[i].clicks++;
+    //     break;
+    //     }
     }
 }
 
@@ -83,11 +89,11 @@ if (clicks === maxClicksAllowed){
 function renderResults(){
     console.log("Your results are in!");
     let ul = document.querySelector("ul");
-    for (let i = 0; i < allProducts.length; i++) {
-        let li = document.createElement("li");
-        li.textContent = `${allProducts[i].name} had ${allProducts[i].views} views and was clicked ${allProducts[i].clicks} times.`;
-        ul.appendChild(li);
-    }
+    // for (let i = 0; i < allProducts.length; i++) {
+    //     let li = document.createElement("li");
+    //     li.textContent = `${allProducts[i].name} had ${allProducts[i].views} views and was clicked ${allProducts[i].clicks} times.`;
+    //     ul.appendChild(li);
+    // }
  }
 
 
@@ -115,4 +121,5 @@ const wineglass = new Product("wineglass", "archive/wine-glass.jpg");
 renderProducts();
 
 productContainer.addEventListener("click", handleProductClick); 
+
 
