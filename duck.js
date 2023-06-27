@@ -36,8 +36,11 @@ function renderProducts() {
     let product2 = getRandomNumber();
     let product3 = getRandomNumber();
 
-    while (product1 === product2 || product2 === product3 || product1 === product3) {
+    while (product2 === product1 || product2 === product3) {
         product2 = getRandomNumber();
+       }
+
+    while (product3 === product1 || product3 === product2) {
         product3 = getRandomNumber();
     }
 
