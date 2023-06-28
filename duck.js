@@ -1,7 +1,7 @@
 "use strict";
 
 let clicks = 0;
-const maxClicksAllowed = 5;
+const maxClicksAllowed = 25;
 
 let allProducts = [];
 
