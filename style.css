@@ -2,7 +2,7 @@
     background-color: palegoldenrod;
 }
 
-h1 {
+h2 {
     color: burlywood;
     font-family: Arial, Helvetica, sans-serif;
     font-style: bold;
@@ -11,6 +11,13 @@ h1 {
     margin: 1rem;
     text-align: center;    
     
+}
+
+h3 {
+    color: sienna;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: medium;
 }
  
 main {
@@ -28,10 +35,10 @@ section {
     
 }
 
-img {
-    float: left;
-    width:  300px;
-    height: 300px;
+.resize2 {
+    display: flex;
+    width:  200px;
+    height: 200px;
     object-fit: cover;
     padding: 10px;
     align-items: center;
@@ -47,4 +54,10 @@ button {
     background-color: paleturquoise;
     cursor: pointer;
     border-radius: 6px;
+}
+
+.resize {
+        width: 100px;
+        height: auto;
+    
 }

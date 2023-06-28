@@ -63,7 +63,7 @@ function renderProducts() {
 
 function handleProductClick(event) {
     if (event.target === productContainer) {
-    alert("please click on an image");
+    alert ("please click on an image");
     } else {
     clicks++;
     console.log(clicks);
@@ -71,7 +71,7 @@ function handleProductClick(event) {
     console.log(clickedProduct);
     for (let i = 0; i < allProducts.length; i++){
         if (clickedProduct === allProducts[i].name)
-       allProducts[i].clicks++;
+        allProducts[i].clicks++;
         break;
         }
 
@@ -122,4 +122,45 @@ renderProducts();
 
 productContainer.addEventListener("click", handleProductClick); 
 
+function renderChart() {
+    const productNames = [];
+    const productViews = [];
+    const productClicks = [];
 
+for (let i = 0; i < allProducts.length; i++) {
+    productNames(allProducts.push[i].name);
+    productViews(allProducts.push[i].views);
+    productClicks(allProducts.push[i].clicks);
+
+}
+
+const data = {
+    labels: productNames,
+    datasets: [
+        {
+        label: "clicks",
+        data: productClicks,
+        backgroundColor: ["#DAF7A6"],
+        borderColor: ["#B451B7"],
+        borderWidth: 1,
+    },
+    {
+      label: "views",
+      data: goatViews,
+      backgroundColor: ["#B451B7"],
+      borderColor: ["#DAF7A6"],
+      borderWidth: 1,
+    },
+    ],
+};
+
+const config = {
+    type: "bar",
+    data: data,
+  };
+
+  const productChart = document.getElementById("chart");
+  const myChart = new Chart(productChart, config);
+}
+
+renderChart();
